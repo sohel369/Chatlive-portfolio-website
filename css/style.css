@@ -110,11 +110,12 @@ header {
         text-align: center;
         background: rgba(255, 255, 255, 0.3);
         box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-        backdrop-filter: blur(2.5px);
-        -webkit-backdrop-filter: blur(2.5px);
+        /* backdrop-filter: blur(2.5px); */
+        /* -webkit-backdrop-filter: blur(2.5px); */
         border-radius: 10px;
         border: 1px solid rgba(255, 255, 255, 0.18);
         padding: 20px;
+
 
         h1 {
             font-weight: 600;
@@ -255,9 +256,6 @@ header {
     }
 }
 
-.activeNav a {
-    display: block;
-}
 
 @media screen and (max-width:768px) {
     header {
@@ -350,10 +348,10 @@ header {
         align-items: center;
         justify-content: center;
 
-       
     }
 
 }
+
 
 
 
@@ -387,6 +385,7 @@ header {
     header .navbar .subNav {
         padding: 10px 5.5%;
     }
+
     form {
         margin-top: 140px;
     }
