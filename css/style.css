@@ -30,7 +30,8 @@ body {
         margin-top: 60px;
     }
 }
-section{
+
+section {
     padding: 20px 6%;
 }
 
@@ -103,17 +104,19 @@ header {
     }
 }  */
 
-.container {
+section {
+    width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(https://img.freepik.com/free-photo/still-life-books-versus-technology_23-2150062920.jpg?t=st=1731638316~exp=1731641916~hmac=4d0a4e8643dec9be4f9464ef3c51bfde214bfa94b7a8f09ebe0e718be5e61ea0&w=740);
-    background-size: 100% 100%;
+    background-image: url('https://img.freepik.com/free-photo/makeup-brush-eyeglasses-cactus-plant-white-flower-bouquet-with-laptop-blue-background_23-2148178672.jpg?t=st=1731859661~exp=1731863261~hmac=47d40c9c3710841fc62fdebf907028a1949903c481d8e70363f21f371c71911d&w=826');
+    background-repeat: no-repeat;
     background-position: center;
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    /* margin-top: 80px; */
+    background-size: cover;
+}
+
+.container {
 
     form {
         width: 360px;
@@ -146,7 +149,7 @@ header {
             background: transparent;
 
             &::placeholder {
-                color: #fff;
+                color: #000;
             }
 
             &:focus {
@@ -166,6 +169,7 @@ header {
                 right: 10px;
                 top: 10px;
                 display: inline-block;
+                color: #000;
             }
         }
 
@@ -211,6 +215,8 @@ header {
         }
     }
 }
+
+
 
 /* section */
 .content {
@@ -352,6 +358,7 @@ header {
 
         li {
             margin-top: 20px;
+
             a {
                 color: #888;
                 text-decoration: none;
@@ -361,37 +368,33 @@ header {
 
 }
 
-
-footer{
+.footer_container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     height: 100px;
     border-top: 1px solid #888;
-    div{
-        h2{
-            font-weight: 400;
-            color: #111;
+
+    .footer_section {
+        h2 {
+            color: #666;
             margin-left: 10px;
         }
     }
-    div{
-        ul{
-            margin-right: 10px;
-            display: flex;
-            li{
-                margin-right: 10px;
-                font-size: 20px;
-                a{
-                    color: #111;
-                }
-            }
+
+    .footer_section li {
+        display: inline-block;
+        margin-right: 10px;
+
+        a {
+            color: #666;
+            text-decoration: none;
+            font-size: 20px;
         }
+
     }
 }
-
-
 
 
 @media screen and (max-width:768px) {
@@ -411,7 +414,7 @@ footer{
 
         .logo {
             width: 40px;
-            margin-left: 18px;
+            /* margin-left: 20px; */
         }
 
         .navbar {
@@ -436,6 +439,7 @@ footer{
                 top: 0;
                 left: 0;
 
+
                 #close {
                     font-size: 30px;
                     cursor: pointer;
@@ -446,7 +450,7 @@ footer{
 
                 a img {
                     width: 40px;
-                    margin-left: 14px;
+                    margin-left: 10px;
                 }
             }
 
@@ -479,12 +483,16 @@ footer{
         }
     }
 
-    .container {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    section{
 
+        .container {
+            height: 400px;
+            form {
+                margin-top: 40px;
+                width: 100%;
+            }
+            
+        }
     }
 
     .about {
@@ -512,46 +520,58 @@ footer{
                 font-size: 40px;
                 text-align: center;
             }
-            button{
+
+            button {
                 width: 100px;
                 margin: 0 auto;
                 text-align: center;
             }
         }
     }
-    .footer{
+
+    .footer {
         width: 100%;
         flex-direction: column;
+
         .footer_text {
             width: 100%;
             display: block;
         }
-        .footer_list{
+
+        .footer_list {
             width: 100%;
             gap: 10px;
         }
     }
-    footer{
-        div{
-            h2{
-                font-size: 20px;
+
+    .footer_container {
+        margin-bottom: 10px;
+        height: 60px;
+
+        .footer_section {
+            h2 {
+                font-size: 16px;
             }
         }
-        ul li a{
-            font-size: 20px;
+
+        .footer_section li {
+            display: inline-block;
+
+            a {
+                color: #666;
+                font-size: 16px;
+            }
+
         }
     }
-
 }
 
 
-
-
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 440px) {
 
     header {
         .logo {
-            margin-left: 26px;
+            margin-left: 24px;
         }
     }
 
@@ -598,13 +618,41 @@ footer{
                 text-align: center;
             }
         }
-    }.footer_list {
+    }
+
+    .footer_list {
         flex-direction: column;
         width: 100%;
     }
-    footer{
+
+    .footer_container {
         flex-direction: column;
-        height: auto;
-        gap: 10px;
+        margin-bottom: 20px;
+        height: 70px;
+
+        .footer_section {
+            h2 {
+                font-size: 16px;
+            }
+        }
+
+        .footer_section li {
+            margin-bottom: 20px;
+            display: inline-block;
+
+            a {
+                color: #666;
+                font-size: 16px;
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 325px) {
+    header {
+        .logo {
+            margin-left: 22px;
+        }
     }
 }
